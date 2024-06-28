@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block  content %}
+<form action ="/send/" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+        <input type="submit" value="Написать">
+</form>
+ {% for c in  chat %}
+ <p>
+    <marc> {{ c.user.username}} :</mark> {{ c.text}} ||| {{ c.date.time}}
+        <div><form action="subscribe/{{ c.user.id}}/" method="post" >
+            {% csrf_token %}
+                <input type = "submit" value="Subscribe">
+        </form>
+    </div>
+ <p>
+ 
+ 
+ 
+ {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock  %}

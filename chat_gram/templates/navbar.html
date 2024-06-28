@@ -1,0 +1,20 @@
+
+
+
+
+<nav> 
+    <a href="/"> Homepage</a>\   
+    <div class="nav-menu">
+        {%if user.is_authenticated%}
+        <span> username: {{user}}</span>
+        <a href="/logout">Выйти</a>
+    {%else%}
+        <a href="/registration">регистрация</a>
+        <a href="/login">войти</a>
+    {% endif %}
+</div>
+</nav>
+           
+            
+        
+

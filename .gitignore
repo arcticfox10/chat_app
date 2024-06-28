@@ -1,0 +1,3 @@
+env
+chat_gram/db.sqlite3
+**/__pycache__
